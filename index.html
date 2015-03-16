@@ -1,0 +1,536 @@
+<!-- SCUCourses.fish Extra Juicy Code -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SCUCourses.fish</title>
+<!--<link rel="stylesheet" type="text/css" href="styles.css" />-->
+<link rel='stylesheet' media='screen and (min-width: 1700px)' href='styles.css' />
+<link rel='stylesheet' media='screen and (max-width: 1699px)' href='betterStyles.css' />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="alpha.js"></script>
+</head>
+
+<body>
+<div id="gradBar">
+	<img id="logoImage" src="images/logo.png" alt="SCUCourses.fish">
+	<div id="resetEverything">
+		<a href="javascript:totalRecall()">Reset</a>
+	</div>
+</div>
+<div id="ultimateContainer">
+	<div id="container1">
+	<!-- Display this initially-->
+	<div id="askForMajor">
+		So do you want to major in <a href="javascript:webDesignClick()" id="webDesign">Web Design</a> or <a href="javascript:coenClick()" id="coen" class="textHover">COEN</a>?
+	</div>
+	<!-- Display after askForMajor click -->
+	<div id="askForConfidence">
+		How certain are you about this major? <a href="javascript:conf(1)" id="fConf">Fairly confident</a> / <a href="javascript:conf(0)" id="uConf" class="textHover">I&rsquo;m secretly terrified I should have picked another</a>
+	</div>
+	
+	<!-- Display after askForConfidence click -->
+	<div id="askAboutC">
+		Listen, do you know anything about C programming? <a href="javascript:cProg(1)" id="fcProg">Oh, yeah</a> / <a href="javascript:cProg(0)" id="ucProg">I know that I know nothing</a>
+		<hr>
+	</div>
+	
+	<!-- Display after askAboutC -->
+	<div id="askForTestType">
+		<div class="wrapper1" id="takenSome">
+			And you&rsquo;ve taken some
+		</div>
+		<div class="wrapper1">
+			<div class="cf">
+				<img class="bottom" src="images/ap-blue.png" />
+				<img id="apGrey" class="top" onclick="apClick()" src="images/ap-grey.png" />
+	  		</div>
+		</div>
+	  	<div class="wrapper1">
+	  		<div class="cf">
+				<img class="bottom" src="images/ib-blue.png" />
+				<img id="ibGrey" class="top" onclick="ibClick()" src="images/ib-grey.png" />
+	  		</div>
+	  	</div>
+	</div>
+	
+	<div id="apSelector">
+		
+		<div>Did you take any of these APs per chance?</div>
+		
+		<div id="superWrapper2a">
+			<div class="wrapper2">
+				<div class="cf">
+					<img class="bottom" src="images/ap/calcAB-blue.png" />
+					<img id="apCalcABGrey" class="top" onclick="apCalcABClick()" src="images/ap/calcAB-grey.png" />
+		  		</div>
+			</div>
+			
+			<div class="wrapper2">
+				<div class="cf">
+					<img class="bottom" src="images/ap/calcBC-blue.png" />
+					<img id="apCalcBCGrey" class="top" onclick="apCalcBCClick()" src="images/ap/calcBC-grey.png" />
+		  		</div>
+			</div>
+			
+			<div class="wrapper2">
+				<div class="cf">
+					<img class="bottom" src="images/ap/chem-blue.png" />
+					<img id="apChemGrey" class="top" onclick="apChemClick()" src="images/ap/chem-grey.png" />
+		  		</div>
+			</div>
+			
+			<div class="wrapper2">
+				<div class="cf">
+					<img class="bottom" src="images/ap/compSciA-blue.png" />
+					<img id="apCompSciAGrey" class="top" onclick="apCompSciAClick()" src="images/ap/compSciA-grey.png" />
+		  		</div>
+			</div>
+			
+			<div class="wrapper2">
+				<div class="cf">
+					<img class="bottom" src="images/ap/physCMech-blue.png" />
+					<img id="apPhysCMechGrey" class="top" onclick="apPhysCMechClick()" src="images/ap/physCMech-grey.png" />
+		  		</div>
+			</div>
+			
+			<div class="wrapper2">
+				<div class="cf">
+					<img class="bottom" src="images/ap/physCElec-blue.png" />
+					<img id="apPhysCElecGrey" class="top" onclick="apPhysCElecClick()" src="images/ap/physCElec-grey.png" />
+		  		</div>
+			</div>
+			
+			<div class="wrapper2">
+				<div class="cf">
+					<img class="bottom" src="images/ap/envi-blue.png" />
+					<img id="apEnviGrey" class="top" onclick="apEnviClick()" src="images/ap/envi-grey.png" />
+		  		</div>
+			</div>
+		</div>
+		
+		<div id="superWrapper2b">
+			<div class="wrapper2b">
+				<div class="cf">
+					<img class="bottom" src="images/ap/govt-blue.png" />
+					<img id="apGovtGrey" class="top" onclick="apGovtClick()" src="images/ap/govt-grey.png" />
+		  		</div>
+			</div>
+			<div class="wrapper2b">
+				<div class="cf">
+					<img class="bottom" src="images/ap/macroEcon-blue.png" />
+					<img id="apMacroEconGrey" class="top" onclick="apMacroEconClick()" src="images/ap/macroEcon-grey.png" />
+		  		</div>
+			</div>
+			<div class="wrapper2b">
+				<div class="cf">
+					<img class="bottom" src="images/ap/microEcon-blue.png" />
+					<img id="apMicroEconGrey" class="top" onclick="apMicroEconClick()" src="images/ap/microEcon-grey.png" />
+		  		</div>
+			</div>
+			<div class="wrapper2b">
+				<div class="cf">
+					<img class="bottom" src="images/ap/psychology-blue.png" />
+					<img id="apPsychologyGrey" class="top" onclick="apPsychologyClick()" src="images/ap/psychology-grey.png" />
+		  		</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="ibSelector">
+		<hr>
+		<div>Oh you&rsquo;re one of those people who took IBs&hellip;</div>
+		
+		<div id="superWrapper3">
+			<div class="wrapper3">
+				<div class="cf">
+					<img class="bottom" src="images/ib/chemIB-blue.png" />
+					<img id="ibChemGrey" class="top" onclick="ibChemClick()" src="images/ib/chemIB-grey.png" />
+		  		</div>
+			</div>
+			
+			<div class="wrapper3">
+				<div class="cf">
+					<img class="bottom" src="images/ib/compSciIB-blue.png" />
+					<img id="ibCompSciGrey" class="top" onclick="ibCompClick()" src="images/ib/compSciIB-grey.png" />
+		  		</div>
+			</div>
+			
+			<div class="wrapper3">
+				<div class="cf">
+					<img class="bottom" src="images/ib/physIB-blue.png" />
+					<img id="ibPhysGrey" class="top" onclick="ibPhysClick()" src="images/ib/physIB-grey.png" />
+		  		</div>
+			</div>
+			
+			<div class="wrapper3">
+				<div class="cf">
+					<img class="bottom" src="images/ib/econIB-blue.png" />
+					<img id="ibEconGrey" class="top" onclick="ibEconClick()" src="images/ib/econIB-grey.png" />
+		  		</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="scoreInputer">
+		<div id="apScoreSection" class="scoreSelectionClass">
+			<div class="apSuperSuper" id="a0">
+				<div class="scoreTitle">AP Calculus AB</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apCalcAbScore(1)" id="a1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apCalcAbScore(2)" id="a2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apCalcAbScore(3)" id="a3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apCalcAbScore(4)" id="a4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apCalcAbScore(5)" id="a5">5</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="b0">
+				<div class="scoreTitle">AP Calculus BC</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apCalcBcScore(1)" id="b1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apCalcBcScore(2)" id="b2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apCalcBcScore(3)" id="b3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apCalcBcScore(4)" id="b4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apCalcBcScore(5)" id="b5">5</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="c0">
+				<div class="scoreTitle">AP Chemistry</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apChemScore(1)" id="c1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apChemScore(2)" id="c2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apChemScore(3)" id="c3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apChemScore(4)" id="c4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apChemScore(5)" id="c5">5</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="d0">
+				<div class="scoreTitle">AP Comp Sci A</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apCompSciAScore(1)" id="d1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apCompSciAScore(2)" id="d2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apCompSciAScore(3)" id="d3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apCompSciAScore(4)" id="d4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apCompSciAScore(5)" id="d5">5</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="e0">
+				<div class="scoreTitle">AP Phys C Mech</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apPhysCMechScore(1)" id="e1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apPhysCMechScore(2)" id="e2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apPhysCMechScore(3)" id="e3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apPhysCMechScore(4)" id="e4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apPhysCMechScore(5)" id="e5">5</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="eX0">
+				<div class="scoreTitle">AP Phys C E/M</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apPhysCElecScore(1)" id="eX1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apPhysCElecScore(2)" id="eX2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apPhysCElecScore(3)" id="eX3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apPhysCElecScore(4)" id="eX4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apPhysCElecScore(5)" id="eX5">5</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="f0">
+				<div class="scoreTitle">AP Enviro Science</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apEnviroScore(1)" id="f1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apEnviroScore(2)" id="f2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apEnviroScore(3)" id="f3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apEnviroScore(4)" id="f4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apEnviroScore(5)" id="f5">5</a></div>
+				</div>
+			</div>
+			
+			<!-- Lettering is going to change unfortunatly thanks to the back end team... -->
+			<div class="apSuperSuper" id="fW0">
+				<div class="scoreTitle">AP Government</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apGovtScore(1)" id="fW1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apGovtScore(2)" id="fW2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apGovtScore(3)" id="fW3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apGovtScore(4)" id="fW4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apGovtScore(5)" id="fW5">5</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="fX0">
+				<div class="scoreTitle">AP Macro Econ</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apMacroEconScore(1)" id="fX1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apMacroEconScore(2)" id="fX2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apMacroEconScore(3)" id="fX3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apMacroEconScore(4)" id="fX4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apMacroEconScore(5)" id="fX5">5</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="fY0">
+				<div class="scoreTitle">AP Micro Econ</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apMicroEconScore(1)" id="fY1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apMicroEconScore(2)" id="fY2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apMicroEconScore(3)" id="fY3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apMicroEconScore(4)" id="fY4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apMicroEconScore(5)" id="fY5">5</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="fZ0">
+				<div class="scoreTitle">AP Psychology</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:apPsychologyScore(1)" id="fZ1">1</a></div>
+					<div class="scoreVal"><a href="javascript:apPsychologyScore(2)" id="fZ2">2</a></div>
+					<div class="scoreVal"><a href="javascript:apPsychologyScore(3)" id="fZ3">3</a></div>
+					<div class="scoreVal"><a href="javascript:apPsychologyScore(4)" id="fZ4">4</a></div>
+					<div class="scoreVal"><a href="javascript:apPsychologyScore(5)" id="fZ5">5</a></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div id="ibScoreSection" class="scoreSelectionClass">
+			<div class="apSuperSuper" id="g0">
+				<div class="scoreTitle">IB Chemistry</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:ibChemScore(1)" id="g1">1</a></div>
+					<div class="scoreVal"><a href="javascript:ibChemScore(2)" id="g2">2</a></div>
+					<div class="scoreVal"><a href="javascript:ibChemScore(3)" id="g3">3</a></div>
+					<div class="scoreVal"><a href="javascript:ibChemScore(4)" id="g4">4</a></div>
+					<div class="scoreVal"><a href="javascript:ibChemScore(5)" id="g5">5</a></div>
+					<div class="scoreVal"><a href="javascript:ibChemScore(6)" id="g6">6</a></div>
+					<div class="scoreVal"><a href="javascript:ibChemScore(7)" id="g7">7</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="h0">
+				<div class="scoreTitle">IB Comp Sci</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:ibCompSciScore(1)" id="h1">1</a></div>
+					<div class="scoreVal"><a href="javascript:ibCompSciScore(2)" id="h2">2</a></div>
+					<div class="scoreVal"><a href="javascript:ibCompSciScore(3)" id="h3">3</a></div>
+					<div class="scoreVal"><a href="javascript:ibCompSciScore(4)" id="h4">4</a></div>
+					<div class="scoreVal"><a href="javascript:ibCompSciScore(5)" id="h5">5</a></div>
+					<div class="scoreVal"><a href="javascript:ibCompSciScore(6)" id="h6">6</a></div>
+					<div class="scoreVal"><a href="javascript:ibCompSciScore(7)" id="h7">7</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="i0">
+				<div class="scoreTitle">IB Physics</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:ibPhysScore(1)" id="i1">1</a></div>
+					<div class="scoreVal"><a href="javascript:ibPhysScore(2)" id="i2">2</a></div>
+					<div class="scoreVal"><a href="javascript:ibPhysScore(3)" id="i3">3</a></div>
+					<div class="scoreVal"><a href="javascript:ibPhysScore(4)" id="i4">4</a></div>
+					<div class="scoreVal"><a href="javascript:ibPhysScore(5)" id="i5">5</a></div>
+					<div class="scoreVal"><a href="javascript:ibPhysScore(6)" id="i6">6</a></div>
+					<div class="scoreVal"><a href="javascript:ibPhysScore(7)" id="i7">7</a></div>
+				</div>
+			</div>
+			
+			<div class="apSuperSuper" id="j0">
+				<div class="scoreTitle">IB Economics</div>
+				<div class="apScoreSuper">
+					<div class="scoreVal"><a href="javascript:ibEconScore(1)" id="j1">1</a></div>
+					<div class="scoreVal"><a href="javascript:ibEconScore(2)" id="j2">2</a></div>
+					<div class="scoreVal"><a href="javascript:ibEconScore(3)" id="j3">3</a></div>
+					<div class="scoreVal"><a href="javascript:ibEconScore(4)" id="j4">4</a></div>
+					<div class="scoreVal"><a href="javascript:ibEconScore(5)" id="j5">5</a></div>
+					<div class="scoreVal"><a href="javascript:ibEconScore(6)" id="j6">6</a></div>
+					<div class="scoreVal"><a href="javascript:ibEconScore(7)" id="j7">7</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<hr id="creSupremeSeperator">
+	
+	<!-- Display after askAboutC -->
+	<div id="creSuper1">
+		Did you pass the calculus readiness exam? <a href="javascript:creClick(1)" id="crePass">Yes, with flying colors</a> / <a href="javascript:creClick(0)" id="creFail">Just put me in pre-calc</a>
+	</div>
+	
+	<!-- <div id="creSuper2">
+		You placed out of the calculus readiness exam.  Nerd.
+	</div> -->
+	
+	<hr id="transferSupremeSeperator">
+	
+	<!-- Display after askAboutC -->
+	<div id="transferMaster">
+		<div id="transferQ1" class="transferQclass">
+			Do you have any transfer credit? <a href="javascript:transferLevel1(1)" id="Q1yes">But of course</a> / <a href="javascript:transferLevel1(0)" id="Q1no">Sadly, I don&rsquo;t</a>
+		</div>
+		<div id="transferQ2" class="transferQclass">
+			Credit in: <a href="javascript:transferLevel2(0)" id="Q2science">Science</a> / <a href="javascript:transferLevel2(1)" id="Q2coen">COEN</a> / <a href="javascript:transferLevel2(2)" id="Q2math">Math</a>
+		</div>
+		<div id="transferSectionSuper">
+			<div id="scienceTransfers" class="transferSectionClass">
+				<div id="ch1" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check1" onclick="transferStrike(0)"><label for="check1" class="lCz"><span></span>CHEM 11</label></div>
+				<div id="ch2" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check2" onclick="transferStrike(0)"><label for="check2" class="lCz"><span></span>PHYS 31</label></div>
+				<div id="ch3" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check3" onclick="transferStrike(0)"><label for="check3" class="lCz"><span></span>PHYS 32</label></div>
+				<div id="ch14" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check14" onclick="transferStrike(0)"><label for="check14" class="lCz"><span></span>PHYS 33</label></div>
+				<div id="ch15" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check15" onclick="transferStrike(0)"><label for="check15" class="lCz"><span></span>Envi Sci</label></div>
+			</div>
+			<div id="coenTransfers" class="transferSectionClass">
+				<div id="ch5" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check5" onclick="transferStrike(1)"><label for="check5" class="lCz"><span></span>COEN 10</label></div>
+				<div id="ch6" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check6" onclick="transferStrike(1)"><label for="check6" class="lCz"><span></span>COEN 11</label></div>
+				<div id="ch7" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check7" onclick="transferStrike(1)"><label for="check7" class="lCz"><span></span>COEN 12</label></div>
+				<div id="ch8" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check8" onclick="transferStrike(2)"><label for="check8" class="lCz"><span></span>COEN 19</label></div>
+			</div>
+			<div id="mathTransfers" class="transferSectionClass">
+				<div id="ch9" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check9" onclick="transferStrike(3)"><label for="check9" class="lCz"><span></span>MATH 11</label></div>
+				<div id="ch10" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check10" onclick="transferStrike(3)"><label for="check10" class="lCz"><span></span>MATH 12</label></div>
+				<div id="ch11" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check11" onclick="transferStrike(3)"><label for="check11" class="lCz"><span></span>MATH 13</label></div>
+				<div id="ch12" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check12" onclick="transferStrike(3)"><label for="check12" class="lCz"><span></span>MATH 14</label></div>
+				<div id="ch13" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check13" onclick="transferStrike(3)"><label for="check13" class="lCz"><span></span>AMTH 106</label></div>
+			</div>
+		</div>
+	</div>
+	
+		
+</div>
+	<div id="scheduleZone">
+		<div id="tableSuper">	
+			<div id="theSeasons" class="rowType">
+				<div class="cellType" id="season1"></div>
+				<div class="cellType" id="season2"></div>
+				<div class="cellType" id="season3"></div>
+			</div>
+			
+			<div id="rowA" class="rowType">
+				<div class="cellType" id="rowA1"></div>
+				<div class="cellType" id="rowA2"></div>
+				<div class="cellType" id="rowA3"></div>
+			</div>
+			
+			<div id="rowB" class="rowType">
+				<div class="cellType" id="rowB1"></div>
+				<div class="cellType" id="rowB2"></div>
+				<div class="cellType" id="rowB3"></div>
+			</div>
+			
+			<div id="rowC" class="rowType">
+				<div class="cellType" id="rowC1"></div>
+				<div class="cellType" id="rowC2"></div>
+				<div class="cellType" id="rowC3"></div>
+			</div>
+			
+			<div id="rowD" class="rowType">
+				<div class="cellType" id="rowD1"></div>
+				<div class="cellType" id="rowD2"></div>
+				<div class="cellType" id="rowD3"></div>
+			</div>
+			
+			<div id="rowE" class="rowType">
+				<div class="cellType" id="rowE1"></div>
+				<div class="cellType" id="rowE2"></div>
+				<div class="cellType" id="rowE3"></div>
+			</div>
+		</div>
+		<div id="printButton">
+			<img src="images/print.png" alt="Print" onclick="printIt()">
+		</div>
+
+	</div>
+</div>
+
+<div id="print_scheduleZone">
+	<div class="print_title" id="print_webTitle">Web Design</div>
+	<div class="print_title" id="print_coenTitle">COEN</div>
+	
+	<div id="print_tableSuper">
+		<div id="print_theSeasons" class="rowType">
+			<div class="print_cellType"> <img id="print_season1" src="images/black/seasons/fall.png"/></div>
+			<div class="print_cellType"> <img id="print_season2" src="images/black/seasons/winter.png"/></div>
+			<div class="print_cellType"> <img id="print_season3" src="images/black/seasons/spring.png"/></div>
+		</div>
+		
+		<div id="rowA" class="rowType">
+			<div class="print_cellType"> <img id="print_rowA1" src="images/black/classes/BLANK.png"/></div>
+			<div class="print_cellType"> <img id="print_rowA2" src="images/black/classes/BLANK.png"/></div>
+			<div class="print_cellType"> <img id="print_rowA3" src="images/black/classes/BLANK.png"/></div>
+		</div>
+		
+		<div id="rowB" class="rowType">
+			<div class="print_cellType"> <img id="print_rowB1" src="images/black/classes/BLANK.png"/></div>
+			<div class="print_cellType"> <img id="print_rowB2" src="images/black/classes/BLANK.png"/></div>
+			<div class="print_cellType"> <img id="print_rowB3" src="images/black/classes/BLANK.png"/></div>
+		</div>
+		
+		<div id="rowC" class="rowType">
+			<div class="print_cellType"> <img id="print_rowC1" src="images/black/classes/BLANK.png"/></div>
+			<div class="print_cellType"> <img id="print_rowC2" src="images/black/classes/BLANK.png"/></div>
+			<div class="print_cellType"> <img id="print_rowC3" src="images/black/classes/BLANK.png"/></div>
+		</div>
+		
+		<div id="rowD" class="rowType">
+			<div class="print_cellType"> <img id="print_rowD1" src="images/black/classes/BLANK.png"/></div>
+			<div class="print_cellType"> <img id="print_rowD2" src="images/black/classes/BLANK.png"/></div>
+			<div class="print_cellType"> <img id="print_rowD3" src="images/black/classes/BLANK.png"/></div>
+		</div>
+		
+		<div id="rowE" class="rowType">
+			<div class="print_cellType"> <img id="print_rowE1" src="images/black/classes/BLANK.png"/></div>
+			<div class="print_cellType"> <img id="print_rowE2" src="images/black/classes/BLANK.png"/></div>
+			<div class="print_cellType"> <img id="print_rowE3" src="images/black/classes/BLANK.png"/></div>
+		</div>
+	</div>
+	
+	<div id="print_placedOutSuper">
+		<div class="print_CRE" id="print_crePass">Passed the CRE</div>
+		<div class="print_CRE" id="print_creFail">Failed the CRE</div>
+		<div id="print_placedOut">
+			<div id="print_apibtests">
+			<div class="print_testX">Test Scores</div>
+			<div class="print_testClass" id="print_test1"></div>
+			<div class="print_testClass" id="print_test2"></div>
+			<div class="print_testClass" id="print_test3"></div>
+			<div class="print_testClass" id="print_test4"></div>
+			<div class="print_testClass" id="print_test5"></div>
+			<div class="print_testClass" id="print_test6"></div>
+			<div class="print_testClass" id="print_test7"></div>
+			<div class="print_testClass" id="print_test8"></div>
+			<div class="print_testClass" id="print_test9"></div>
+			<div class="print_testClass" id="print_test10"></div>
+			<div class="print_testClass" id="print_test11"></div>
+			<div class="print_testClass" id="print_test12"></div>
+			<div class="print_testClass" id="print_test13"></div>
+			<div class="print_testClass" id="print_test14"></div>
+			<div class="print_testClass" id="print_test15"></div>
+		</div>
+			
+			<div id="print_transferInfo">
+			<div class="print_testX">Transfer Credit</div>
+			<div class="print_transferClass" id="print_transfer1">CHEM 11</div>
+			<div class="print_transferClass" id="print_transfer2">PHYS 31</div>
+			<div class="print_transferClass" id="print_transfer3">PHYS 32</div>
+			<div class="print_transferClass" id="print_transfer14">PHYS 33</div>
+			<div class="print_transferClass" id="print_transfer15">Envi Sci</div>
+			<div class="print_transferClass" id="print_transfer5">COEN 10</div>
+			<div class="print_transferClass" id="print_transfer6">COEN 11</div>
+			<div class="print_transferClass" id="print_transfer7">COEN 12</div>
+			<div class="print_transferClass" id="print_transfer8">COEN 19</div>
+			<div class="print_transferClass" id="print_transfer9">MATH 11</div>
+			<div class="print_transferClass" id="print_transfer10">MATH 12</div>
+			<div class="print_transferClass" id="print_transfer11">MATH 13</div>
+			<div class="print_transferClass" id="print_transfer12">MATH 14</div>
+			<div class="print_transferClass" id="print_transfer13">AMTH 106</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+
+</html>

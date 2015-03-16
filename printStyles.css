@@ -1,0 +1,94 @@
+@media print
+{
+    * {-webkit-print-color-adjust:exact;}
+}
+
+#print_scheduleZone {
+	height: 452px;
+	width: 70%;
+	margin: 0 auto;
+	display: none;
+}
+
+#print_tableSuper{
+	width: 549px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+.print_cellType{
+	width: 133px;
+	height: 62px;
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.print_title{
+	margin: 0 auto;
+	color:#000000;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
+    font-size:40pt;
+}
+
+#print_webTitle{
+	width: 271px;
+	display: none;
+}
+
+#print_coenTitle{
+	width: 140px;
+	display: none;
+}
+
+#print_placedOutSuper{
+	width: 500px;
+	margin: 0 auto;
+}
+
+#print_placedOut{
+	margin: 0 auto;
+	width: 500px;
+}
+
+.print_testClass{
+	display: none;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
+    font-size:15pt;
+}
+
+#print_apibtests{
+	float: left;
+}
+
+.print_transferClass{
+	display: none;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
+    font-size:15pt;
+}
+
+#print_transferInfo{
+	float: right;
+}
+
+.print_testX{
+	text-decoration: underline;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
+    font-size:15pt;
+}
+
+.print_CRE{
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
+    font-size:15pt;
+    margin: 0 auto;
+    display: none;
+}
+
+#print_crePass{
+	width: 137px;
+}
+
+#print_creFail{
+	width: 123px;
+}
